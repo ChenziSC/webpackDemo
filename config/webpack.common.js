@@ -17,7 +17,7 @@ function resolve(dir) {
 module.exports = {
     context: path.resolve(__dirname, '../'), // 入口起点根目录
     entry: {
-        app: './src/index.js'
+        app: './src/js/index.js'
     },
     output: {
         path: resolve('build'),
@@ -25,7 +25,7 @@ module.exports = {
         chunkFilename: 'static/js/[name].[contenthash:8].chunk.js',
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: './src/index.html' }),
+        new HtmlWebpackPlugin({ template: './src/html/index.html' }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'static/css/[name].css',   //打包到static的css目录下
